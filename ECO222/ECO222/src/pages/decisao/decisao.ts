@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { MercadorPage } from '../mercador/mercador';
-import { ClientePage } from '../cliente/cliente';
-import { ContactPage } from '../contact/contact';
-import { ClienteDecisaoPage } from '../cliente-decisao/cliente-decisao';
-import { LoginMercadorPage } from '../login-mercador/login-mercador';
 import { SignUpMercadorPage } from '../sign-up-mercador/sign-up-mercador';
+import { LoginClientePage } from '../login-cliente/login-cliente';
 
 /**
  * Generated class for the DecisaoPage page.
@@ -25,15 +21,13 @@ export class DecisaoPage {
   }
 
   goToClientePage(){
-    this.navCtrl.push(ClienteDecisaoPage)
+    this.navCtrl.push(LoginClientePage)
   }
 
   goToMercadorPage(){
     this.navCtrl.push(SignUpMercadorPage)
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DecisaoPage');
-  }
+
 
 }

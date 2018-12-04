@@ -13,6 +13,8 @@ export class ContactPage {
   title :string;
   form: FormGroup;
   contact: any;
+  
+
 
   constructor(
     public navCtrl: NavController, 
@@ -38,6 +40,8 @@ export class ContactPage {
       name: [this.contact.name, Validators.required],
       tel: [this.contact.tel, Validators.required],
       vencimento: [this.contact.vencimento, Validators.required],
+      precoantes: [this.contact.precoantes, Validators.required],
+      precodepois: [this.contact.precodepois, Validators.required],
       
     })
   }

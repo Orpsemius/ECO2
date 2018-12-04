@@ -1,5 +1,5 @@
 <!--
-  Generated template for the ClienteHomePage page.
+  Generated template for the MercadorHomePage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,12 +7,18 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>clienteHome</ion-title>
+    <ion-title>Bem vindo Cliente</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <p>Bem vindo ao seu perfil</p>
+  <br>
+  <p> O que gostaria de fazer?</p>
+  <button ion-button block (click)="signOut()"> Logout </button>
+  <button ion-button block (click)="verMercadoria()"> Ver Promoções </button>
 
 </ion-content>

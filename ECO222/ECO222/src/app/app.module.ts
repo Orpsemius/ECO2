@@ -27,6 +27,8 @@ import { AuthService } from '../providers/auth/auth-service';
 import { LoginMercadorPage } from '../pages/login-mercador/login-mercador';
 import { SignUpMercadorPage } from '../pages/sign-up-mercador/sign-up-mercador';
 import { ResetpasswordPage } from '../pages/resetpassword/resetpassword';
+import { LoginClientePage } from '../pages/login-cliente/login-cliente';
+import { VerProdutosPage } from '../pages/ver-produtos/ver-produtos';
 //import { AuthService } from '../providers/auth/auth';
 
 
@@ -44,7 +46,10 @@ import { ResetpasswordPage } from '../pages/resetpassword/resetpassword';
     ClienteDecisaoPage,
     LoginMercadorPage,
     SignUpMercadorPage,
-    ResetpasswordPage
+    ResetpasswordPage,
+    LoginClientePage,
+    VerProdutosPage
+    
     
   ],
   imports: [
@@ -79,7 +84,9 @@ import { ResetpasswordPage } from '../pages/resetpassword/resetpassword';
     ClienteDecisaoPage,
     LoginMercadorPage,
     SignUpMercadorPage,
-    ResetpasswordPage
+    ResetpasswordPage,
+    LoginClientePage,
+    VerProdutosPage
      
   ],
   providers: [

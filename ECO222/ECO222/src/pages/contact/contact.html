@@ -43,6 +43,26 @@
   </div>
 </ion-item>
 
+<ion-item>
+  <ion-label stacked>Preço antes da promoção</ion-label>
+  <ion-input type="num" placeholder="28,40" formControlName="precoantes"></ion-input>
+</ion-item>
+<ion-item *ngIf="!form.controls.precoantes.valid && (form.controls.precoantes.dirty || form.controls.precoantes.touched)" color = "danger">
+<div [hidden]="!form.controls.precoantes.errors.required">
+  O campo é obrigatório
+</div> 
+</ion-item>
+
+<ion-item>
+  <ion-label stacked>Preço depois da promoção</ion-label>
+  <ion-input type="num" placeholder="17,35" formControlName="precodepois"></ion-input>
+</ion-item>
+<ion-item *ngIf="!form.controls.precodepois.valid && (form.controls.precodepois.dirty || form.controls.precodepois.touched)" color = "danger">
+<div [hidden]="!form.controls.precodepois.errors.required">
+  O campo é obrigatório
+</div>
+</ion-item>
+
 
   
   

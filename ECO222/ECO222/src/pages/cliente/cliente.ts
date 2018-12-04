@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,  } from 'ionic-angular';
 import { ClienteHomePage } from '../cliente-home/cliente-home';
+import { MercadorHomePage } from '../mercador-home/mercador-home';
 
 /**
  * Generated class for the ClientePage page.
@@ -16,29 +17,17 @@ import { ClienteHomePage } from '../cliente-home/cliente-home';
 })
 export class ClientePage {
 
-  constructor(
-    public navCtrl: NavController, 
-    public navParams: NavParams,
-    public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
- 
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ClientePage');
-  }
-
-  goToClienteHome(){
+  goToClientePage(){
     this.navCtrl.push(ClienteHomePage)
   }
 
-  /*showAlert() {
-    const alert = this.alertCtrl.create({
-      title: 'Mensagem',
-      subTitle: 'Você logou!',
-      buttons: ['OK']
-    });
-    alert.present();
-  }*/
-
+  goToMercadorPage(){
+    this.navCtrl.push(MercadorHomePage)
+  }
 }
+
+
+

@@ -1,18 +1,18 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController,  ToastController } from 'ionic-angular';
+import { IonicPage, NavController, ToastController } from 'ionic-angular';
 import { NgForm } from '@angular/forms';
 import { AuthService } from '../../providers/auth/auth-service';
-import { LoginMercadorPage } from '../login-mercador/login-mercador';
 import { User } from '../../providers/auth/user';
-import { MercadorHomePage } from '../mercador-home/mercador-home';
 import { ResetpasswordPage } from '../resetpassword/resetpassword';
+import { ClienteDecisaoPage } from '../cliente-decisao/cliente-decisao';
+import { ClienteHomePage } from '../cliente-home/cliente-home';
+
 @IonicPage()
 @Component({
-  selector: 'page-sign-up-mercador',
-  templateUrl: 'sign-up-mercador.html',
+  selector: 'page-login-cliente',
+  templateUrl: 'login-cliente.html',
 })
-
-export class SignUpMercadorPage {
+export class LoginClientePage {
   user: User = new User();
   @ViewChild('form') form: NgForm;
 
@@ -23,7 +23,7 @@ export class SignUpMercadorPage {
   }
 
   createAccount(){
-    this.navCtrl.push(LoginMercadorPage)
+    this.navCtrl.push(ClienteDecisaoPage)
   }
 
   resetPassword(){
@@ -36,7 +36,7 @@ export class SignUpMercadorPage {
     if (this.form.form.valid){
       this.authService.signIn(this.user)
       .then(() =>{
-        this.navCtrl.setRoot(MercadorHomePage);
+        this.navCtrl.setRoot(ClienteHomePage);
       })
       .catch((error: any) =>{
         let toast = this.toastCtrl.create({duration: 3000, position:'bottom'});

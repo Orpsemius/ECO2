@@ -1,9 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, ToastController } from 'ionic-angular';
 import { NgForm } from '@angular/forms';
 import { User } from '../../providers/auth/user';
 import { AuthService } from '../../providers/auth/auth-service';
-import { HomePage } from '../home/home';
+import { MercadorHomePage } from '../mercador-home/mercador-home';
 
 
 @IonicPage()
@@ -30,7 +30,7 @@ export class LoginMercadorPage {
 
         toast.setMessage('Usuário criado com sucesso.')
         toast.present();
-        this.navCtrl.setRoot(HomePage);
+        this.navCtrl.setRoot(MercadorHomePage);
 
       })
       .catch((error: any) => {

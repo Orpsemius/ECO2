@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { CadastroDeMercadoriaPage } from '../cadastro-de-mercadoria/cadastro-de-mercadoria';
 import { AuthService } from '../../providers/auth/auth-service';
 import { DecisaoPage } from '../decisao/decisao';
+import { ContactPage } from '../contact/contact';
+import { HomePage } from '../home/home';
 
 
 
@@ -21,7 +22,7 @@ export class MercadorHomePage {
   }
   
   goToCadastroDeMercadoriaPage(){
-    this.navCtrl.push(CadastroDeMercadoriaPage)
+    this.navCtrl.push(ContactPage)
   }
   signOut(){
     this.authService.signOut()
@@ -31,7 +32,9 @@ export class MercadorHomePage {
     .catch((error) =>{
       console.error(error);
     })
-
+  }
+  verMercadoria(){
+    this.navCtrl.push(HomePage)
   }
 
 }

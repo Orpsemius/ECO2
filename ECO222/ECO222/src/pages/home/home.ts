@@ -6,6 +6,7 @@ import { ContactProvider } from './../../providers/contact/contact';
 import { Observable } from 'rxjs/Observable';
 import { AuthService } from '../../providers/auth/auth-service'
 import { DecisaoPage } from '../decisao/decisao';
+import { ContactPage } from '../contact/contact';
 
 @Component({
   selector: 'page-home',
@@ -32,7 +33,7 @@ export class HomePage {
   }
 
   editContact(contact:any){
-    this.navCtrl.push('ContactPage', {contact: contact});
+    this.navCtrl.push(ContactPage, {contact: contact});
 
   }
 
