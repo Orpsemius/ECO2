@@ -24,23 +24,43 @@
 
 
   <ion-item>
-    <ion-label stacked>Telefone</ion-label>
-    <ion-input type="tel" formControlName="tel"></ion-input>
+    <ion-label stacked>Endereço</ion-label>
+    <ion-input type="text" formControlName="endereco"></ion-input>
   </ion-item>
-  <ion-item *ngIf="!form.controls.tel.valid && (form.controls.tel.dirty || form.controls.tel.touched)" color ="danger">
-    <div [hidden]="!form.controls.tel.errors.required">
+  <ion-item *ngIf="!form.controls.endereco.valid && (form.controls.endereco.dirty || form.controls.endereco.touched)" color ="danger">
+    <div [hidden]="!form.controls.endereco.errors.required">
       O campo é obrigatório      
     </div>
   </ion-item> 
 
   <ion-item>
-    <ion-label stacked>Data de Validade</ion-label>
-    <ion-input type="num" placeholder="DD/MM/AA" formControlName="vencimento"></ion-input>
+    <ion-label stacked>Dia de Validade</ion-label>
+    <ion-input type="num" placeholder="DD" formControlName="dia" maxlength="2"></ion-input>
   </ion-item>
-<ion-item *ngIf="!form.controls.vencimento.valid && (form.controls.vencimento.dirty || form.controls.vencimento.touched)" color = "danger">
-  <div [hidden]="!form.controls.vencimento.errors.required">
+  <ion-item *ngIf="!form.controls.dia.valid && (form.controls.dia.dirty || form.controls.dia.touched)" color = "danger">
+  <div [hidden]="!form.controls.dia.errors.required">
     O campo é obrigatório
   </div>
+</ion-item>
+
+<ion-item>
+  <ion-label stacked>Mês de Validade</ion-label>
+  <ion-input type="num" placeholder="MM" formControlName="mes" maxlength="2"></ion-input>
+</ion-item>
+<ion-item *ngIf="!form.controls.mes.valid && (form.controls.mes.dirty || form.controls.mes.touched)" color = "danger">
+<div [hidden]="!form.controls.mes.errors.required">
+  O campo é obrigatório
+</div>
+</ion-item>
+
+<ion-item>
+  <ion-label stacked>Ano de Validade</ion-label>
+  <ion-input type="num" placeholder="AA" formControlName="ano" maxlength="2"  ></ion-input>
+</ion-item>
+<ion-item *ngIf="!form.controls.ano.valid && (form.controls.ano.dirty || form.controls.ano.touched)" color = "danger">
+<div [hidden]="!form.controls.ano.errors.required">
+  O campo é obrigatório
+</div>
 </ion-item>
 
 <ion-item>
@@ -64,12 +84,13 @@
 </ion-item>
 
 
+
   
   
-  <div padding>
-    <button ion-button block type="submit" [disabled]="!form.valid" (click)="onSubmit()">Salvar</button>  
-  </div>
-  
+<div padding>
+  <button ion-button block type="submit" [disabled]="!form.valid" (click)="onSubmit()">Salvar</button>  
+</div>
+
   
   </form>
 

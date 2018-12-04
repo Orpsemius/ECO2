@@ -21,7 +21,7 @@ import { ClienteHomePage } from '../pages/cliente-home/cliente-home';
 import { ContatosProvider } from '../providers/contatos/contatos';
 import { ContactProvider } from '../providers/contact/contact';
 import { DecisaoPage } from '../pages/decisao/decisao';
-import { ContactPage } from '../pages/contact/contact';
+
 import { ClienteDecisaoPage } from '../pages/cliente-decisao/cliente-decisao';
 import { AuthService } from '../providers/auth/auth-service';
 import { LoginMercadorPage } from '../pages/login-mercador/login-mercador';
@@ -29,6 +29,8 @@ import { SignUpMercadorPage } from '../pages/sign-up-mercador/sign-up-mercador';
 import { ResetpasswordPage } from '../pages/resetpassword/resetpassword';
 import { LoginClientePage } from '../pages/login-cliente/login-cliente';
 import { VerProdutosPage } from '../pages/ver-produtos/ver-produtos';
+import { ContactPage } from '../pages/contact/contact';
+
 //import { AuthService } from '../providers/auth/auth';
 
 
@@ -42,13 +44,13 @@ import { VerProdutosPage } from '../pages/ver-produtos/ver-produtos';
     CadastroDeMercadoriaPage,
     ClienteHomePage,
     DecisaoPage,
-    ContactPage,
     ClienteDecisaoPage,
     LoginMercadorPage,
     SignUpMercadorPage,
     ResetpasswordPage,
     LoginClientePage,
-    VerProdutosPage
+    VerProdutosPage,
+    ContactPage
     
     
   ],
@@ -69,6 +71,7 @@ import { VerProdutosPage } from '../pages/ver-produtos/ver-produtos';
     AngularFireAuthModule,
     
     
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -80,7 +83,7 @@ import { VerProdutosPage } from '../pages/ver-produtos/ver-produtos';
     CadastroDeMercadoriaPage,
     ClienteHomePage,
     DecisaoPage,
-    ContactPage,
+    ContactPage, 
     ClienteDecisaoPage,
     LoginMercadorPage,
     SignUpMercadorPage,

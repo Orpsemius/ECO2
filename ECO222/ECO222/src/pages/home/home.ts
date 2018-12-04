@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
-import { ClientePage } from '../cliente/cliente';
 import { MercadorPage } from '../mercador/mercador';
 import { ContactProvider } from './../../providers/contact/contact';
 import { Observable } from 'rxjs/Observable';
-import { AuthService } from '../../providers/auth/auth-service'
-import { DecisaoPage } from '../decisao/decisao';
+/*import { AuthService } from '../../providers/auth/auth-service'
+import { DecisaoPage } from '../decisao/decisao';*/
 import { ContactPage } from '../contact/contact';
 
 @Component({
@@ -20,7 +19,7 @@ export class HomePage {
     public navCtrl: NavController,
     private provider: ContactProvider,
     private toast: ToastController,
-    private authService: AuthService) {
+    /*private authService: AuthService*/) {
 
       this.contacts = this.provider.getAll();
       
@@ -47,19 +46,19 @@ export class HomePage {
     })
   }
 
-  signOut(){
+  /*signOut(){
     this.authService.signOut()
     .then(() => {
       this.navCtrl.setRoot(DecisaoPage);
     })
     .catch((error) =>{
       console.error(error);
-    })
+     })
 
-  }
+  }*/
 
   goToClientePage(){
-    this.navCtrl.push(ClientePage)
+    this.navCtrl.push(ContactPage)
   }
 
   goToMercadorPage(){

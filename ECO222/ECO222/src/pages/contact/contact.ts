@@ -38,8 +38,11 @@ export class ContactPage {
     this.form = this.formBuilder.group({
       key: [this.contact.key],
       name: [this.contact.name, Validators.required],
-      tel: [this.contact.tel, Validators.required],
-      vencimento: [this.contact.vencimento, Validators.required],
+      endereco: [this.contact.endereco, Validators.required],
+      //vencimento: [this.contact.vencimento, Validators.required],
+      dia: [this.contact.dia, Validators.required],
+      mes: [this.contact.mes, Validators.required],
+      ano: [this.contact.ano, Validators.required],
       precoantes: [this.contact.precoantes, Validators.required],
       precodepois: [this.contact.precodepois, Validators.required],
       

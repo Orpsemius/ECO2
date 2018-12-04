@@ -3,7 +3,8 @@ import { IonicPage, NavController, ToastController } from 'ionic-angular';
 import { NgForm } from '@angular/forms';
 import { User } from '../../providers/auth/user';
 import { AuthService } from '../../providers/auth/auth-service';
-import { HomePage } from '../home/home';
+
+import { ClienteHomePage } from '../cliente-home/cliente-home';
 
 
 @IonicPage()
@@ -30,7 +31,7 @@ export class ClienteDecisaoPage {
 
         toast.setMessage('Usuário criado com sucesso.')
         toast.present();
-        this.navCtrl.setRoot(HomePage);
+        this.navCtrl.setRoot(ClienteHomePage);
 
       })
       .catch((error: any) => {
