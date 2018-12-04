@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CadastroDeMercadoriaPage } from '../cadastro-de-mercadoria/cadastro-de-mercadoria';
+import { AuthService } from '../../providers/auth/auth-service';
+import { DecisaoPage } from '../decisao/decisao';
 
-/**
- * Generated class for the MercadorHomePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -16,7 +13,7 @@ import { CadastroDeMercadoriaPage } from '../cadastro-de-mercadoria/cadastro-de-
 })
 export class MercadorHomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private authService: AuthService) {
   }
 
   ionViewDidLoad() {
@@ -25,6 +22,16 @@ export class MercadorHomePage {
   
   goToCadastroDeMercadoriaPage(){
     this.navCtrl.push(CadastroDeMercadoriaPage)
+  }
+  signOut(){
+    this.authService.signOut()
+    .then(() => {
+      this.navCtrl.setRoot(DecisaoPage);
+    })
+    .catch((error) =>{
+      console.error(error);
+    })
+
   }
 
 }

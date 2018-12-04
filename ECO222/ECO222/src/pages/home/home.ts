@@ -4,6 +4,8 @@ import { ClientePage } from '../cliente/cliente';
 import { MercadorPage } from '../mercador/mercador';
 import { ContactProvider } from './../../providers/contact/contact';
 import { Observable } from 'rxjs/Observable';
+import { AuthService } from '../../providers/auth/auth-service'
+import { DecisaoPage } from '../decisao/decisao';
 
 @Component({
   selector: 'page-home',
@@ -16,7 +18,8 @@ export class HomePage {
     constructor(
     public navCtrl: NavController,
     private provider: ContactProvider,
-    private toast: ToastController) {
+    private toast: ToastController,
+    private authService: AuthService) {
 
       this.contacts = this.provider.getAll();
       
@@ -41,6 +44,17 @@ export class HomePage {
     .catch(() =>{
       this.toast.create({ message: 'Erro ao remover o contato.', duration:3000}).present;
     })
+  }
+
+  signOut(){
+    this.authService.signOut()
+    .then(() => {
+      this.navCtrl.setRoot(DecisaoPage);
+    })
+    .catch((error) =>{
+      console.error(error);
+    })
+
   }
 
   goToClientePage(){

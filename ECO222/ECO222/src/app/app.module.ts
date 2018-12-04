@@ -8,6 +8,7 @@ import { HttpModule } from '@angular/http';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 
 import { MyApp } from './app.component';
@@ -19,6 +20,14 @@ import { CadastroDeMercadoriaPage } from '../pages/cadastro-de-mercadoria/cadast
 import { ClienteHomePage } from '../pages/cliente-home/cliente-home';
 import { ContatosProvider } from '../providers/contatos/contatos';
 import { ContactProvider } from '../providers/contact/contact';
+import { DecisaoPage } from '../pages/decisao/decisao';
+import { ContactPage } from '../pages/contact/contact';
+import { ClienteDecisaoPage } from '../pages/cliente-decisao/cliente-decisao';
+import { AuthService } from '../providers/auth/auth-service';
+import { LoginMercadorPage } from '../pages/login-mercador/login-mercador';
+import { SignUpMercadorPage } from '../pages/sign-up-mercador/sign-up-mercador';
+import { ResetpasswordPage } from '../pages/resetpassword/resetpassword';
+//import { AuthService } from '../providers/auth/auth';
 
 
 @NgModule({
@@ -29,7 +38,13 @@ import { ContactProvider } from '../providers/contact/contact';
     MercadorPage,
     MercadorHomePage,
     CadastroDeMercadoriaPage,
-    ClienteHomePage
+    ClienteHomePage,
+    DecisaoPage,
+    ContactPage,
+    ClienteDecisaoPage,
+    LoginMercadorPage,
+    SignUpMercadorPage,
+    ResetpasswordPage
     
   ],
   imports: [
@@ -46,6 +61,9 @@ import { ContactProvider } from '../providers/contact/contact';
     storageBucket: "eco2-3d45d.appspot.com",
     messagingSenderId: "36591106240"
     }),
+    AngularFireAuthModule,
+    
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -56,6 +74,12 @@ import { ContactProvider } from '../providers/contact/contact';
     MercadorHomePage,
     CadastroDeMercadoriaPage,
     ClienteHomePage,
+    DecisaoPage,
+    ContactPage,
+    ClienteDecisaoPage,
+    LoginMercadorPage,
+    SignUpMercadorPage,
+    ResetpasswordPage
      
   ],
   providers: [
@@ -63,7 +87,9 @@ import { ContactProvider } from '../providers/contact/contact';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ContatosProvider,
-    ContactProvider
+    ContactProvider,
+    AuthService,
+    
   ]
 })
 export class AppModule {}

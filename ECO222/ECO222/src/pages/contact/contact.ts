@@ -36,7 +36,9 @@ export class ContactPage {
     this.form = this.formBuilder.group({
       key: [this.contact.key],
       name: [this.contact.name, Validators.required],
-      tel: [this.contact.tel, Validators.required]
+      tel: [this.contact.tel, Validators.required],
+      vencimento: [this.contact.vencimento, Validators.required],
+      
     })
   }
 
