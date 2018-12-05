@@ -26,6 +26,7 @@ export class VerProdutosPage {
 
     this.contacts = this.provider.getAll();
     
+    
 
 
 }

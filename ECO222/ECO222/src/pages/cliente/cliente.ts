@@ -21,11 +21,11 @@ export class ClientePage {
   }
 
   goToClientePage(){
-    this.navCtrl.push(ClienteHomePage)
+    this.navCtrl.setRoot(ClienteHomePage)
   }
 
   goToMercadorPage(){
-    this.navCtrl.push(MercadorHomePage)
+    this.navCtrl.setRoot(MercadorHomePage)
   }
 }
 

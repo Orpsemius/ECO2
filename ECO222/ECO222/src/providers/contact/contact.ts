@@ -33,12 +33,12 @@ export class ContactProvider {
       return new Promise ((resolve, reject) => {
         if (contact.key) {
           this.db.list(this.PATH)
-          .update(contact.key, {name: contact.name, endereco: contact.endereco, dia: contact.dia,mes: contact.mes,ano: contact.ano, precoantes: contact.precoantes, precodepois: contact.precodepois})
+          .update(contact.key, {name: contact.name, estabelecimento: contact.estabelecimento, endereco: contact.endereco, complemento:contact.complemento, dia: contact.dia,mes: contact.mes,ano: contact.ano, precoantes: contact.precoantes, precodepois: contact.precodepois})
           .then(() => resolve())
           .catch((e) => reject(e));
         } else{
           this.db.list(this.PATH)
-          .push ({name: contact.name, endereco: contact.endereco, dia: contact.dia,mes: contact.mes,ano: contact.ano, precoantes: contact.precoantes, precodepois: contact.precodepois})
+          .push ({name: contact.name, endereco: contact.endereco, estabelecimento: contact.estabelecimento, complemento:contact.complemento, dia: contact.dia,mes: contact.mes,ano: contact.ano, precoantes: contact.precoantes, precodepois: contact.precodepois})
           .then (() => resolve());
         }
       })

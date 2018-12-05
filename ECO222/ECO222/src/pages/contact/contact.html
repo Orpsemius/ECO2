@@ -22,16 +22,31 @@
     </div>
   </ion-item>
 
+  <ion-item>
+      <ion-label stacked>Estabelecimento</ion-label>
+      <ion-input type="text" placeholder="Nome do Estabelecimento aqui" formControlName="estabelecimento"></ion-input>
+    </ion-item>
+  <ion-item *ngIf="!form.controls.estabelecimento.valid && (form.controls.estabelecimento.dirty || form.controls.estabelecimento.touched)" color = "danger">
+    <div [hidden]="!form.controls.estabelecimento.errors.required">
+      O campo é obrigatório
+    </div>
+  </ion-item>
+
 
   <ion-item>
     <ion-label stacked>Endereço</ion-label>
-    <ion-input type="text" placeholder="Rua dos exemplos, numero 47" formControlName="endereco"></ion-input>
+    <ion-input type="text" placeholder="Rua dos exemplos, numero 47" formControlName="endereco" maxlength="46"></ion-input>
   </ion-item>
   <ion-item *ngIf="!form.controls.endereco.valid && (form.controls.endereco.dirty || form.controls.endereco.touched)" color ="danger">
     <div [hidden]="!form.controls.endereco.errors.required">
       O campo é obrigatório      
     </div>
   </ion-item> 
+
+  <ion-item>
+      <ion-label stacked>Complemento</ion-label>
+      <ion-input type="text" placeholder="Complemento" formControlName="complemento"></ion-input>
+  </ion-item>
 
   <ion-item>
     <ion-label stacked>Dia de Validade</ion-label>
