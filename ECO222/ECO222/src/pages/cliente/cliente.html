@@ -1,21 +1,42 @@
 
-<ion-header>
+<ion-header color = 'dark'>
 
-  <ion-navbar>
-    <ion-title>decisao</ion-title>
-  </ion-navbar>
-
-  <button ion-button primary (click)="goToClientePage()">Cliente</button>
-  <button ion-button secondary (click)="goToMercadorPage()">Mercador</button>
-
-</ion-header>
-
-
-<ion-content padding>
-
-</ion-content>
-
-
-
-
-
+    <ion-navbar color= 'dark'>
+        <ion-title color= 'dark'>Seja bem vindo ao Eco2</ion-title>
+    </ion-navbar>
+  
+    
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+  
+      <p text = 'strong'>Com o ECO2 você pode ver e anunciar promoções de produtos que estão próximos do prazo de validade.</p>
+      <p> O que você gostaria de fazer no momento?</p>
+      <br>
+      <p>Procurar promoções</p>
+      <ion-row center>  
+          <ion-col text-center>   
+              <button ion-button round color='dark'  (click)="goToClientePage()">Cliente</button>
+          </ion-col> 
+         </ion-row>
+      <br>
+      <p>Anunciar promoções</p>
+      <ion-row center>  
+          <ion-col text-center>   
+              <button ion-button round color='dark'  (click)="goToMercadorPage()">Mercador</button>
+          </ion-col> 
+         </ion-row>
+       
+       
+      
+  
+  </ion-content>
+  
+  
+  
+  
+  
+  
+  

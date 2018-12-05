@@ -1,7 +1,7 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Bem vindo ao ECO2 Home
+<ion-header color = 'dark'>
+    <ion-navbar color= 'dark'>
+        <ion-title color= 'dark'>
+      Sua promoções
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -12,10 +12,10 @@
     <ion-item-sliding *ngFor="let contact of contacts | async">
       <ion-item>
         <h1>{{ contact.name }}</h1>
-        <p> {{ contact.validade }}</p>        
+        <p> {{ contact.precodepois }}</p>        
       </ion-item>
       <ion-item-options side="left">
-        <button ion-button color="secondary" (click)="editContact(contact)">
+        <button ion-button color="primary" (click)="editContact(contact)">
           <ion-icon name="create"></ion-icon>
         </button>
         <button ion-button color="danger" (click)="removeContact(contact.key)">
@@ -29,7 +29,7 @@
   
  
   <ion-fab bottom right>
-    <button ion-fab color="primary" (click)="goToClientePage()">
+    <button ion-fab color="dark" (click)="goToClientePage()">
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-fab>

@@ -1,7 +1,7 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Bem vindo ao ECO2
+<ion-header color = 'dark'>
+    <ion-navbar color= 'dark'>
+    <ion-title color= 'dark'>
+      Promoções disponíveis
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -12,7 +12,10 @@
     <ion-item-sliding *ngFor="let contact of contacts | async">
       <ion-item>
         <h1>{{ contact.name }}</h1>
-        <p> {{ contact.validade }}</p>        
+        <p> {{contact.endereco}}</p>
+        <p> Vencimento {{contact.dia}}/{{contact.mes}}/{{contact.ano}}</p>
+        <p> De {{contact.precoantes}} reais</p>
+        <p> Por {{ contact.precodepois }} reais</p>        
       </ion-item>
            
       

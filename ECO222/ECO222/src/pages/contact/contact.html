@@ -1,8 +1,8 @@
 
-<ion-header>
+<ion-header color = 'dark'>
 
-  <ion-navbar color="primary">
-    <ion-title>{{ title }}</ion-title>
+    <ion-navbar color= 'dark'>
+        <ion-title color= 'dark'>Cadastro de promoção</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -13,8 +13,8 @@
   <form [formGroup]= "form"> 
 
     <ion-item>
-      <ion-label stacked>Nome</ion-label>
-      <ion-input type="text" placeholder="Seu nome aqui" formControlName="name"></ion-input>
+      <ion-label stacked>Produto</ion-label>
+      <ion-input type="text" placeholder="Nome do produto aqui" formControlName="name"></ion-input>
     </ion-item>
   <ion-item *ngIf="!form.controls.name.valid && (form.controls.name.dirty || form.controls.name.touched)" color = "danger">
     <div [hidden]="!form.controls.name.errors.required">
@@ -25,7 +25,7 @@
 
   <ion-item>
     <ion-label stacked>Endereço</ion-label>
-    <ion-input type="text" formControlName="endereco"></ion-input>
+    <ion-input type="text" placeholder="Rua dos exemplos, numero 47" formControlName="endereco"></ion-input>
   </ion-item>
   <ion-item *ngIf="!form.controls.endereco.valid && (form.controls.endereco.dirty || form.controls.endereco.touched)" color ="danger">
     <div [hidden]="!form.controls.endereco.errors.required">
@@ -88,7 +88,7 @@
   
   
 <div padding>
-  <button ion-button block type="submit" [disabled]="!form.valid" (click)="onSubmit()">Salvar</button>  
+  <button ion-button color='dark' block type="submit" [disabled]="!form.valid" (click)="onSubmit()">Salvar</button>  
 </div>
 
   
